@@ -5,8 +5,12 @@ const service = require('../server/protos/greet_grpc_pb');
 
 //Implement the greet RPC method
 function greet(call, callback) {
+
+    //Set up the response object
     const greeting = new greets.GreetingResponse();
 
+    //Set the 'result' field of the response object to say hello
+    //Get the first name of the request object from the 'call' variable
     greeting.setResult("Hello " + call.request.getGreeting().getFirstName());
     console.log("call:", call);
     console.log("call request:", call.request);

@@ -7,9 +7,6 @@ function main() {
     console.log('Hello from client');
     
     const client = new service.GreetingServiceClient('localhost:50051', grpc.credentials.createInsecure());
-    
-    //here we do stuff
-    //console.log("Client:", client);
 
     //Set up the RPC request
     let request = new greets.GreetingRequest();
@@ -26,10 +23,8 @@ function main() {
             console.log("Greeting response", response.getResult());
         } else {
             console.log("Error", error);
-            
         }
     });
-    
 }
 
 main();
