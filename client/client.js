@@ -1,6 +1,6 @@
 const grpc = require('grpc');
 
-const greets = require('../server/protos/greet_pb');
+const greet = require('../server/protos/greet_pb');
 const service = require('../server/protos/greet_grpc_pb');
 
 function main() {
@@ -9,10 +9,10 @@ function main() {
     const client = new service.GreetingServiceClient('localhost:50051', grpc.credentials.createInsecure());
 
     //Set up the RPC request
-    let request = new greets.GreetingRequest();
+    let request = new greet.GreetingRequest();
 
     //The request is sent with a message of type Greeting, so set it up
-    let greeting = new greets.Greeting();
+    let greeting = new greet.Greeting();
     greeting.setFirstName("Jerry");
     greeting.setLastName("Tom");
     request.setGreeting(greeting);
