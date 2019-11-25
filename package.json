@@ -1,0 +1,14 @@
+{
+  "name": "grpcnode",
+  "version": "1.0.0",
+  "description": "Node gRPC practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oliver Tilk",
+  "license": "ISC",
+  "dependencies": {
+    "google-protobuf": "^3.11.0-rc.2"
+  }
+}
