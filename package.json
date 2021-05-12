@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "google-protobuf": "^3.11.0-rc.2",
-    "grpc": "^1.24.2",
+    "grpc": "^1.24.9",
     "nodemon": "^2.0.1"
   },
   "devDependencies": {
